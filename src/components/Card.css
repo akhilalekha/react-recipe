@@ -1,0 +1,19 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.card {
+	box-sizing: border-box;
+	background-color: rgb(99, 243, 131);
+	height: 300px;
+	width: 250px;
+	margin: 15px;
+}
+.recipeDetails {
+	padding: 10px;
+}
+.recipeImage {
+	height: 150px;
+	width: 250px;
+	object-fit: cover;
+}

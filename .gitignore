@@ -24,5 +24,4 @@ yarn-error.log*
 
 .eslintcache
 
-src/config
-src/config/keys.js
+src/config/dev.js
