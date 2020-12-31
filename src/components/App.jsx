@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 import Card from "./Card";
+// import Popup from "./Popup";
 const keys = require("../config/keys");
 
 function App() {
 	const [items, setItems] = useState([]);
 	const [input, setInput] = useState("");
 	const [query, setQuery] = useState("chicken");
+	const [loaded, setLoaded] = useState(false);
 
 	useEffect(() => {
 		let URI = `https://api.edamam.com/search?q=${query}&app_id=${keys.appID}&app_key=${keys.appKey}`;
@@ -16,6 +18,7 @@ function App() {
 			const data = await response.json();
 			console.log({ data });
 			setItems(data.hits);
+			setLoaded(true);
 		};
 		console.log("test");
 		getRecipes();
@@ -46,6 +49,7 @@ function App() {
 			<button className="searchBtn" type="submit" onClick={getSearch}>
 				Search
 			</button>
+			{/* <Popup items={loaded ? items : "nothing"} /> */}
 			<div className="cardContainer">
 				{items.map((item) => (
 					<Card
