@@ -1,5 +1,5 @@
 // ----------------- prod.js ----------------------
 module.exports = {
-	googleClientID: process.env.APP_ID,
-	googleClientSecret: process.env.API_KEY
+	appID: process.env.APP_ID,
+	appKey: process.env.API_KEY
 };
