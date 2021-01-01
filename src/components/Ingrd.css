@@ -1,0 +1,35 @@
+.ingrdBox {
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid rgb(195, 196, 195);
+	border-radius: 15px;
+	margin: 3px;
+}
+.imageBox {
+	width: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3px;
+}
+.ingrdImage {
+	width: 40px;
+	height: 40px;
+	border: 3px solid var(--green);
+	border-radius: 50%;
+}
+
+.ingrdText,
+.ingrdWeight {
+	font-size: 14px;
+	align-self: center;
+}
+
+.ingrdText {
+	width: 230px;
+}
+
+.ingrdWeight {
+	width: 50px;
+	text-align: center;
+}

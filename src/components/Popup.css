@@ -24,22 +24,36 @@
 	/* height: 350px; */
 	background-color: white;
 }
+.Popup.content h3 {
+	font-family: "Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 800;
+}
 .Popup.image {
 	object-fit: cover;
 	width: 350px;
 	/* height: 350px; */
 }
+.popupDetails {
+	display: flex;
+	align-items: center;
+	justify-content: stretch;
+}
 
+.popupDetail {
+	margin-right: 10px;
+}
 .popupBtn {
 	color: var(--green);
 	border-radius: 5px;
 	border: 2px solid var(--green);
-	width: 90%;
+	width: 97%;
 	height: 30px;
 	text-align: center;
 	font-weight: bold;
 	padding: 3px 0;
 	text-decoration: none;
-	display: block;
 	align-self: center;
+	margin: 10px;
+	font-family: "Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 800;
 }

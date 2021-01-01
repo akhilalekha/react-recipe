@@ -49,7 +49,18 @@ function App() {
 			<button className="searchBtn" type="submit" onClick={getSearch}>
 				Search
 			</button>
-			<Popup items={loaded ? items : "null"} />
+			{loaded && (
+				<Popup
+					key={uuidv4()}
+					image={items[0].recipe.image}
+					name={items[0].recipe.label}
+					calories={items[0].recipe.calories}
+					time={items[0].recipe.totalTime}
+					dietlabels={items[0].recipe.dietLabels}
+					url={items[0].recipe.url}
+					ingredients={items[0].recipe.ingredients}
+				/>
+			)}
 			<div className="cardContainer">
 				{items.map((item) => (
 					<Card
@@ -60,7 +71,6 @@ function App() {
 						time={item.recipe.totalTime}
 						dietlabels={item.recipe.dietLabels}
 						url={item.recipe.url}
-						ingredients={item.recipe.ingredients}
 					/>
 				))}
 			</div>
