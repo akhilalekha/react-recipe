@@ -1,23 +1,25 @@
 import React from "react";
-import "./Card.css";
+import "./Popup.css";
 function Popup({ items }) {
-	console.log(items);
+	// console.log(items);
 	return (
-		items !== "nothing" && (
+		items !== "null" && (
 			<div className="recipePopup">
-				<h3>{items[0].recipe.label}</h3>
-				<img src={item.recipe.image} alt="recipe-image" />
-				<p className="">{items[0].recipe.totalTime} min</p>
-				<p className="">{items[0].recipe.calories} kcal</p>
-				<p className="">label</p>
-				<a
-					className=""
-					href={items[0].recipe.url}
-					rel="noopener noreferrer"
-					target="_blank"
-				>
-					Recipe
-				</a>
+				<img className="Popup image" src={items[0].recipe.image} alt="recipe" />
+				<div className="Popup content">
+					<h3>{items[0].recipe.label}</h3>
+					<p className="popupDetail One">{items[0].recipe.totalTime} min</p>
+					<p className="popupDetail two">{items[0].recipe.calories} kcal</p>
+					<p className="popupDetail three">label</p>
+					<a
+						className="popupBtn"
+						href={items[0].recipe.url}
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						See full recipe
+					</a>
+				</div>
 			</div>
 		)
 	);

@@ -1,4 +1,45 @@
+* {
+	--grey-dark: rgb(104, 102, 102);
+}
 .recipePopup {
-	height: 500px;
-	width: 500px;
+	box-sizing: border-box;
+	width: fit-content;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 2% 15%;
+	box-shadow: 0 4px 8px 0 var(--grey-dark);
+}
+@media screen and (max-width: 1016px) {
+	.recipePopup {
+		box-shadow: none;
+	}
+}
+.Popup.content {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding: 10px;
+	width: 350px;
+	/* height: 350px; */
+	background-color: white;
+}
+.Popup.image {
+	object-fit: cover;
+	width: 350px;
+	/* height: 350px; */
+}
+
+.popupBtn {
+	color: var(--green);
+	border-radius: 5px;
+	border: 2px solid var(--green);
+	width: 90%;
+	height: 30px;
+	text-align: center;
+	font-weight: bold;
+	padding: 3px 0;
+	text-decoration: none;
+	display: block;
+	align-self: center;
 }
