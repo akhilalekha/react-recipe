@@ -8,7 +8,7 @@ const keys = require("../config/keys");
 function App() {
 	const [items, setItems] = useState([]);
 	const [input, setInput] = useState("");
-	const [query, setQuery] = useState("chicken");
+	const [query, setQuery] = useState("icecream");
 	// const [loaded, setLoaded] = useState(false);
 
 	useEffect(() => {
@@ -42,7 +42,7 @@ function App() {
 					id="searchString"
 					type="search"
 					value={input}
-					placeholder="Search for a recipe"
+					placeholder="Search recipes..."
 					onChange={handleChange}
 				/>
 			</form>
